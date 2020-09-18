@@ -1,0 +1,252 @@
+/* GENERAL */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #808080;
+  font-size: 16px;
+
+}
+
+/* UTILITIES */
+
+/* Layout */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+.float-left{
+  float: left;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.col-3{
+  width: calc(100% /3 );
+  padding: 0 20px;
+  float: left;
+}
+
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3{
+  font-weight: 500;
+}
+
+h2{
+  margin-bottom: 15px;
+  font-size: 28px;
+  color:#000;
+}
+
+
+h2.big{
+  font-size: 32px;
+  line-height: 1.2;
+
+}
+
+
+p{
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+/* Buttons */
+
+/* abbiamo creato il bottone senza forzare con il padding, infatti muovendo padding e line-height possiamo
+facilmente modificare l impostazioni del bottone */
+.btn{
+  border: 1px solid white;
+  padding:  5px 10px;
+  border-radius: 5px;
+  min-width: 100px;
+  display: inline-block;
+  text-align: center;
+  line-height: 23px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* variante Buttons */
+.btn-green{
+  background: #7cbb02;
+  border: none;
+}
+
+.btn-large{
+  padding: 20px;
+}
+
+
+/* MENU */
+.menu-inline li{
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.menu-inline li:first-child{
+  padding-left: 0;
+}
+
+.menu-inine li:last-child{
+  padding-right: 0;
+}
+
+/* HEADER */
+
+.main-header{
+  background-color: #0c325a;
+  height: 560px;
+/* senza flottare nulla siamo riusciti con le proprietà
+BACKGROUND a posizionare l'immagine di Sfondo */
+  background-image: url('../img/background-header.png');
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: right bottom;
+  }
+
+.header-nav{
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.header-nav .header-logo img{
+  vertical-align: middle;
+}
+
+.header-nav li a{
+  text-decoration:none;
+  color:#fff;
+}
+
+.header-nav .header-logo{
+  width:15%;
+}
+
+.header-nav .header-nav-center{
+  width: 45%;
+
+}
+
+.header-nav .header-nav-right{
+  width: 40%;
+}
+
+.header-nav .header-nav-right{
+  text-align: right;
+}
+
+/* Jumbotron */
+
+/* 560px di altezza -80px di line-height = 480px e in questo modo possiamo creare proporzioni % per l'allineamento degli elemti interni */
+.jumbotron{
+  position: relative;
+  height: 480px;
+}
+
+.jumbotron-text{
+  position: absolute;
+  top: 50%;
+  left:0;
+/* lo recuperiamo dalla metà della sua altezza effettiva */
+transform:translateY(-50%);
+}
+
+.jumbotron-text h1{
+  font-size: 54px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* efficency */
+
+main .efficency{
+  background-color: lightgrey;
+  padding: 40px 15px;
+}
+
+main .efficency p{
+  font-size: 20px;
+}
+
+/* info */
+
+.info{
+  padding: 40px 15px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.info img{
+  max-height: 150px;
+  margin-bottom: 20px;
+}
+
+.info h3{
+  color:#7cbb02;
+  font-size: 28px;
+}
+
+.info h3::after{
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: grey;
+  margin: 25px auto;
+}
+
+
+/* Plan */
+
+.plan .col{
+  padding: 50px;
+}
+
+.plan p{
+  margin-bottom: 20px;
+}
+
+
+
+ /* Help (fixed element)  */
+
+.help{
+  position: fixed;
+  bottom:0;
+  right:15%;
+}
+
+.help a{
+  display: inline-block;
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px 5px 0 0;
+}
